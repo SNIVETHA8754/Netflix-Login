@@ -36,7 +36,7 @@ function check() {
      
     if (!hasError){
         axios
-        .post('http://localhost:3000/loginpage',{email: email, password: pass}, { withCredentials: true })
+        .post(`${import.meta.env.VITE_API_URL}`,{email: email, password: pass}, { withCredentials: true })
 
        .then(data => {
   if (data.data === true) {
